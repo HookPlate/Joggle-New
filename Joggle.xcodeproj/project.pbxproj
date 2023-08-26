@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		543AA15B2A8652D80077A926 /* JoggleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543AA15A2A8652D80077A926 /* JoggleApp.swift */; };
+		543AA15D2A8652D80077A926 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543AA15C2A8652D80077A926 /* ContentView.swift */; };
+		543AA15F2A8652D80077A926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543AA15E2A8652D80077A926 /* Assets.xcassets */; };
+		543AA1622A8652D80077A926 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543AA1612A8652D80077A926 /* Preview Assets.xcassets */; };
+		543AA1692A8653D60077A926 /* LetterGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543AA1682A8653D60077A926 /* LetterGridView.swift */; };
+		543AA16B2A8656290077A926 /* LetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543AA16A2A8656290077A926 /* LetterView.swift */; };
+		543AA16D2A866C920077A926 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543AA16C2A866C920077A926 /* Player.swift */; };
+		543AA16F2A866F3D0077A926 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543AA16E2A866F3D0077A926 /* Game.swift */; };
+		546098802A93395C00B9F6BC /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5460987F2A93395C00B9F6BC /* Dictionary.swift */; };
+		546098822A9376D600B9F6BC /* String-Scoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546098812A9376D600B9F6BC /* String-Scoring.swift */; };
+		546098842A9378D200B9F6BC /* PlayerResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546098832A9378D200B9F6BC /* PlayerResults.swift */; };
+		546098862A937CFE00B9F6BC /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546098852A937CFE00B9F6BC /* ResultsView.swift */; };
+		54793E642A94A1ED00FCB758 /* es_ANY.dic in Resources */ = {isa = PBXBuildFile; fileRef = 54793E632A94A1ED00FCB758 /* es_ANY.dic */; };
+		547E7B0C2A9685DF004CA478 /* es.txt in Resources */ = {isa = PBXBuildFile; fileRef = 547E7B0B2A9685DF004CA478 /* es.txt */; };
+		547E7B0E2A968CA1004CA478 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547E7B0D2A968CA1004CA478 /* GameView.swift */; };
+		54BD8DCA2A9215CC0015701C /* dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = 54BD8DC92A9215CC0015701C /* dictionary.txt */; };
+		54F0DA932A9924D400B1B7D6 /* spain@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F0DA922A9924D400B1B7D6 /* spain@3x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		543AA1572A8652D80077A926 /* Joggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Joggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		543AA15A2A8652D80077A926 /* JoggleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoggleApp.swift; sourceTree = "<group>"; };
+		543AA15C2A8652D80077A926 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		543AA15E2A8652D80077A926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		543AA1612A8652D80077A926 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		543AA1682A8653D60077A926 /* LetterGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterGridView.swift; sourceTree = "<group>"; };
+		543AA16A2A8656290077A926 /* LetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterView.swift; sourceTree = "<group>"; };
+		543AA16C2A866C920077A926 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		543AA16E2A866F3D0077A926 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		5460987F2A93395C00B9F6BC /* Dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		546098812A9376D600B9F6BC /* String-Scoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Scoring.swift"; sourceTree = "<group>"; };
+		546098832A9378D200B9F6BC /* PlayerResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerResults.swift; sourceTree = "<group>"; };
+		546098852A937CFE00B9F6BC /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		54793E632A94A1ED00FCB758 /* es_ANY.dic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = es_ANY.dic; sourceTree = "<group>"; };
+		547E7B0B2A9685DF004CA478 /* es.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = es.txt; sourceTree = "<group>"; };
+		547E7B0D2A968CA1004CA478 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		54BD8DC92A9215CC0015701C /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
+		54F0DA922A9924D400B1B7D6 /* spain@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "spain@3x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		543AA1542A8652D80077A926 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		543AA14E2A8652D80077A926 = {
+			isa = PBXGroup;
+			children = (
+				543AA1592A8652D80077A926 /* Joggle */,
+				543AA1582A8652D80077A926 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		543AA1582A8652D80077A926 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				543AA1572A8652D80077A926 /* Joggle.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		543AA1592A8652D80077A926 /* Joggle */ = {
+			isa = PBXGroup;
+			children = (
+				543AA15A2A8652D80077A926 /* JoggleApp.swift */,
+				543AA15C2A8652D80077A926 /* ContentView.swift */,
+				547E7B0D2A968CA1004CA478 /* GameView.swift */,
+				546098812A9376D600B9F6BC /* String-Scoring.swift */,
+				546098832A9378D200B9F6BC /* PlayerResults.swift */,
+				546098852A937CFE00B9F6BC /* ResultsView.swift */,
+				543AA16C2A866C920077A926 /* Player.swift */,
+				543AA16E2A866F3D0077A926 /* Game.swift */,
+				54BD8DC92A9215CC0015701C /* dictionary.txt */,
+				54793E632A94A1ED00FCB758 /* es_ANY.dic */,
+				547E7B0B2A9685DF004CA478 /* es.txt */,
+				5460987F2A93395C00B9F6BC /* Dictionary.swift */,
+				543AA1682A8653D60077A926 /* LetterGridView.swift */,
+				543AA16A2A8656290077A926 /* LetterView.swift */,
+				54F0DA922A9924D400B1B7D6 /* spain@3x.png */,
+				543AA15E2A8652D80077A926 /* Assets.xcassets */,
+				543AA1602A8652D80077A926 /* Preview Content */,
+			);
+			path = Joggle;
+			sourceTree = "<group>";
+		};
+		543AA1602A8652D80077A926 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				543AA1612A8652D80077A926 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		543AA1562A8652D80077A926 /* Joggle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 543AA1652A8652D80077A926 /* Build configuration list for PBXNativeTarget "Joggle" */;
+			buildPhases = (
+				543AA1532A8652D80077A926 /* Sources */,
+				543AA1542A8652D80077A926 /* Frameworks */,
+				543AA1552A8652D80077A926 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Joggle;
+			productName = Joggle;
+			productReference = 543AA1572A8652D80077A926 /* Joggle.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		543AA14F2A8652D80077A926 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					543AA1562A8652D80077A926 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 543AA1522A8652D80077A926 /* Build configuration list for PBXProject "Joggle" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 543AA14E2A8652D80077A926;
+			productRefGroup = 543AA1582A8652D80077A926 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				543AA1562A8652D80077A926 /* Joggle */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		543AA1552A8652D80077A926 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				547E7B0C2A9685DF004CA478 /* es.txt in Resources */,
+				54F0DA932A9924D400B1B7D6 /* spain@3x.png in Resources */,
+				54BD8DCA2A9215CC0015701C /* dictionary.txt in Resources */,
+				543AA1622A8652D80077A926 /* Preview Assets.xcassets in Resources */,
+				543AA15F2A8652D80077A926 /* Assets.xcassets in Resources */,
+				54793E642A94A1ED00FCB758 /* es_ANY.dic in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		543AA1532A8652D80077A926 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546098822A9376D600B9F6BC /* String-Scoring.swift in Sources */,
+				543AA15D2A8652D80077A926 /* ContentView.swift in Sources */,
+				543AA16F2A866F3D0077A926 /* Game.swift in Sources */,
+				546098862A937CFE00B9F6BC /* ResultsView.swift in Sources */,
+				543AA15B2A8652D80077A926 /* JoggleApp.swift in Sources */,
+				547E7B0E2A968CA1004CA478 /* GameView.swift in Sources */,
+				543AA16B2A8656290077A926 /* LetterView.swift in Sources */,
+				546098802A93395C00B9F6BC /* Dictionary.swift in Sources */,
+				546098842A9378D200B9F6BC /* PlayerResults.swift in Sources */,
+				543AA16D2A866C920077A926 /* Player.swift in Sources */,
+				543AA1692A8653D60077A926 /* LetterGridView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		543AA1632A8652D80077A926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		543AA1642A8652D80077A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		543AA1662A8652D80077A926 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Joggle/Preview Content\"";
+				DEVELOPMENT_TEAM = AVZGHFFGZD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = robintetley.com.Joggle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		543AA1672A8652D80077A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Joggle/Preview Content\"";
+				DEVELOPMENT_TEAM = AVZGHFFGZD;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = robintetley.com.Joggle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		543AA1522A8652D80077A926 /* Build configuration list for PBXProject "Joggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				543AA1632A8652D80077A926 /* Debug */,
+				543AA1642A8652D80077A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		543AA1652A8652D80077A926 /* Build configuration list for PBXNativeTarget "Joggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				543AA1662A8652D80077A926 /* Debug */,
+				543AA1672A8652D80077A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 543AA14F2A8652D80077A926 /* Project object */;
+}
