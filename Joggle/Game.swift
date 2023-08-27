@@ -11,6 +11,50 @@ class Game: ObservableObject {
     //keeps track of which player scored which words. Instead of stoppoing the players by telling them that the other player has found that word already (that would slow the game down a lot) we let them keep spelling but track who got them first.
     //the string is the word that was found, the Player is who found it first.
     var scores = [String: Player]()
+    
+     var spanishVersion = false
+    
+     var diceEitherOr: [[String]] {
+        if spanishVersion {
+            return [
+                ["A", "R", "H", "S", "D", "E"],
+                ["F", "U", "A", "A", "R", "B"],
+                ["I", "O", "T", "A", "L", "G"],
+                ["U", "O", "E", "E", "O", "Ch"],
+                ["F", "O", "M", "T", "U", "I"],
+                ["O", "O", "D", "B", "L", "G"],
+                ["R", "P", "S", "Z", "L", "T"],
+                ["E", "B", "I", "O", "U", "A"],
+                ["C", "A", "R", "E", "M", "E"],
+                ["R", "S", "J", "E", "F", "I"],
+                ["N", "S", "X", "J", "A", "H"],
+                ["U", "V", "D", "Q", "B", "Ch"],
+                ["N", "B", "I", "M", "E", "E"],
+                ["B", "A", "A", "N", "I", "T"],
+                ["E", "P", "V", "O", "C", "U"],
+                ["S", "C", "A", "A", "P", "T"]
+            ]
+        } else {
+            return [
+                    ["A", "A", "E", "E", "G", "N"],
+                    ["A", "B", "B", "J", "O", "O"],
+                    ["A", "C", "H", "O", "P", "S"],
+                    ["A", "F", "F", "K", "P", "S"],
+                    ["A", "O", "O", "T", "T", "W"],
+                    ["C", "I", "M", "O", "T", "U"],
+                    ["D", "E", "I", "L", "R", "X"],
+                    ["D", "E", "L", "R", "V", "Y"],
+                    ["D", "I", "S", "T", "T", "Y"],
+                    ["E", "E", "G", "H", "N", "W"],
+                    ["E", "E", "I", "N", "S", "U"],
+                    ["E", "H", "R", "T", "V", "W"],
+                    ["E", "I", "O", "S", "S", "T"],
+                    ["E", "L", "R", "T", "T", "Y"],
+                    ["H", "L", "N", "N", "R", "Z"],
+                    ["H", "I", "M", "N", "U", "Qu"]
+                ]
+        }
+    }
     //okay
 //    var dice = [
 //        ["A", "A", "E", "E", "G", "N"],
@@ -57,15 +101,13 @@ class Game: ObservableObject {
     @Published var showingResults = false
     private var timer: AnyCancellable?
     
-    @Published var spanishVersion = false
-    
     init() {
         reset()
     }
     
     func reset() {
         //picks one random letter from each array in dice thus resetting the tiles var.
-        tiles = dice.shuffled().map {
+        tiles = diceEitherOr.shuffled().map {
             $0.randomElement() ?? "X"
         }
         scores.removeAll()
@@ -78,7 +120,7 @@ class Game: ObservableObject {
             .autoconnect()
             .sink(receiveValue: update)
         
-        timeRemaining = 90
+        timeRemaining = 20
     }
     //subtract a second from our timer until finally we run out of time and show the results
     func update(_ newTime: Date) {

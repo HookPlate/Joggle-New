@@ -10,6 +10,7 @@ import SwiftUI
 struct GameView: View {
     
     @StateObject private var game = Game()
+    @StateObject private var player = Player(color: .green)
     // place the timer view into a computed property then display it once normally and once with rotation
     var timeRemainingText: Text {
         if game.timeRemaining > 0 {
@@ -17,6 +18,18 @@ struct GameView: View {
             Text(Date.now.addingTimeInterval(game.timeRemaining), style: .timer)
         } else {
             return Text("0:00")
+        }
+    }
+    
+    var isSpanish: Bool {
+        didSet {
+            if isSpanish {
+                game.spanishVersion = true
+                player.spanishVersion = true
+            } else {
+                game.spanishVersion = false
+                player.spanishVersion = false
+            }
         }
     }
     
@@ -76,6 +89,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(isSpanish: true)
     }
 }

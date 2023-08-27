@@ -9,8 +9,9 @@ import SwiftUI
 
 class Player: ObservableObject {
     var usedWords = [String]()
-    var color: Color
+    var color = Color.black
     
+    var spanishVersion = false
     //positions of the letters on the board they've tapped so far. In this way we can check its adjacent neighbours and deselect them later on..
     @Published var selectedTiles = [Int]()
     
@@ -71,16 +72,30 @@ class Player: ObservableObject {
             return "Ya usaste esa palabra"
         }
         //Checking that the dictionary actually contains that word.
-        if Dictionary.contains(word) {
-            //If both of those are true, we’ll add the word to the player’s usedWords array, then clear their selectedTiles array so they can start spelling a new word.
-            usedWords.append(word)
-            //Again, yes: this means we’re tracking used words in two places. However, the context is slightly different: we track individual player’s words so we can tell them when they have used a word more than once, but it would be annoying to do that for words the opponent found because it would slow down the game too much.
+        if spanishVersion {
+            if Spanish_Dictionary.contains(word) {
+                //If both of those are true, we’ll add the word to the player’s usedWords array, then clear their selectedTiles array so they can start spelling a new word.
+                usedWords.append(word)
+                //Again, yes: this means we’re tracking used words in two places. However, the context is slightly different: we track individual player’s words so we can tell them when they have used a word more than once, but it would be annoying to do that for words the opponent found because it would slow down the game too much.
 
-            game.add(word, for: self)
-            selectedTiles.removeAll()
+                game.add(word, for: self)
+                selectedTiles.removeAll()
+            } else {
+                return "Esta palabra no la conozco"
+            }
         } else {
-            return "Esta palabra no la conozco"
+            if English_Dictionary.contains(word) {
+
+                usedWords.append(word)
+
+
+                game.add(word, for: self)
+                selectedTiles.removeAll()
+            } else {
+                return "Esta palabra no la conozco"
+            }
         }
+        
         return nil
     }
 }
