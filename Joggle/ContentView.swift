@@ -25,7 +25,7 @@ struct ContentView: View {
                                 Text("Jugar en Español")
                                     .multilineTextAlignment(.center)
                                     .foregroundStyle(.white)
-                                    .font(.system(size: 17))
+                                    .font(.system(size: 19))
                                     .fontWeight(.bold)
                                 NavigationLink(destination: GameView().onAppear{game.spanishVersion = true}) {
                                     Image("spain")
@@ -45,7 +45,7 @@ struct ContentView: View {
                                 Text("Play in English")
                                     .multilineTextAlignment(.center)
                                     .foregroundStyle(.white)
-                                    .font(.system(size: 17))
+                                    .font(.system(size: 19))
                                     .fontWeight(.bold)
                                 NavigationLink(destination: GameView().onAppear{game.spanishVersion = false}) {
                                     Image("uk")
