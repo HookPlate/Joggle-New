@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    //
     
+    @EnvironmentObject var game: Game
     
     var body: some View {
             
@@ -27,7 +27,7 @@ struct ContentView: View {
                                     .foregroundStyle(.white)
                                     .font(.system(size: 17))
                                     .fontWeight(.bold)
-                                NavigationLink(destination: GameView(isSpanish: true)) {
+                                NavigationLink(destination: GameView()) {
                                     Image("spain")
                                         .renderingMode(.original)
                                         .resizable()
@@ -39,8 +39,10 @@ struct ContentView: View {
                             .padding()
                             .background(.black.opacity(0.3))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
-                            
-                          //  Spacer()
+                            .onTapGesture {
+                                game.gameIsInSpanishVersion(spanishVersion: true)
+                                //game.spanishVersion.toggle()
+                            }
                             
                             VStack {
                                 Text("Play in English")
@@ -48,7 +50,7 @@ struct ContentView: View {
                                     .foregroundStyle(.white)
                                     .font(.system(size: 17))
                                     .fontWeight(.bold)
-                                NavigationLink(destination: GameView(isSpanish: false)) {
+                                NavigationLink(destination: GameView()) {
                                     Image("uk")
                                         .renderingMode(.original)
                                         .resizable()
@@ -60,6 +62,11 @@ struct ContentView: View {
                             .padding()
                             .background(.black.opacity(0.3))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .onTapGesture {
+                               // game.spanishVersion.toggle()
+                                game.gameIsInSpanishVersion(spanishVersion: false)
+                            }
+                            
                             Spacer()
                                 .frame(height: 1)
                         }

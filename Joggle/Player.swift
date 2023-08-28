@@ -11,14 +11,16 @@ class Player: ObservableObject {
     var usedWords = [String]()
     var color = Color.black
     
+    @EnvironmentObject var game: Game
     
-    var spanishVersion : Bool
+    
+    //var spanishVersion : Bool
     //positions of the letters on the board they've tapped so far. In this way we can check its adjacent neighbours and deselect them later on..
     @Published var selectedTiles = [Int]()
     
-    init(color: Color, spanishVersion : Bool) {
+    init(color: Color) {
         self.color = color
-        self.spanishVersion = spanishVersion
+    //    self.spanishVersion = spanishVersion
     }
     //resets that players game
     func reset() {
@@ -74,7 +76,7 @@ class Player: ObservableObject {
             return "Ya usaste esa palabra"
         }
         //Checking that the dictionary actually contains that word.
-        if spanishVersion {
+        if game.spanishVersion {
             if Spanish_Dictionary.contains(word) {
                 //If both of those are true, we’ll add the word to the player’s usedWords array, then clear their selectedTiles array so they can start spelling a new word.
                 usedWords.append(word)

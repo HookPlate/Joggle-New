@@ -12,7 +12,7 @@ class Game: ObservableObject {
     //the string is the word that was found, the Player is who found it first.
     var scores = [String: Player]()
     //currently, changing the below manually and the two bool in the Playr inits further down will change the game as we need, provingmy logic is sound for the dictionaries and keyboards.
-    var spanishVersion = false
+    @Published var spanishVersion = false
     
      var diceEitherOr: [[String]] {
         if spanishVersion {
@@ -93,8 +93,8 @@ class Game: ObservableObject {
         ["S", "C", "A", "A", "P", "T"]
     ]
     
-    var player1 = Player(color: .mint, spanishVersion: false)
-    var player2 = Player(color: .orange, spanishVersion: false)
+    var player1 = Player(color: .mint)
+    var player2 = Player(color: .orange)
     var tiles = [String]()
     
     @Published var timeRemaining = 0.0
@@ -141,6 +141,11 @@ class Game: ObservableObject {
         if scores[word] == nil {
             scores[word] = player
         }
+    }
+    
+    func gameIsInSpanishVersion(spanishVersion: Bool) {
+        print("we're using onTapGesture")
+        self.spanishVersion = spanishVersion
     }
     
 //the above: we need to call it in one very precise place: inside the submit() method of our Player class, just next to where we use usedWords.append(word) to let each player track their own words.

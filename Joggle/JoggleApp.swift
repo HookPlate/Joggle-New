@@ -12,6 +12,7 @@ struct JoggleApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Game())
         }
     }
 }
