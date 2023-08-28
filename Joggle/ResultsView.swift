@@ -11,6 +11,8 @@ import SwiftUI
 
 struct ResultsView: View {
     
+    @EnvironmentObject var game: Game
+    
     var player1Words = [String]()
     var player2Words = [String]()
     var player1Score = 0
@@ -46,10 +48,10 @@ struct ResultsView: View {
         //calculate who won
         if player1Score > player2Score {
 //            result = "Player 1 wins!"
-            result = "Jugador 1 gana!"
+            result = game.spanishVersion ? "Jugador 1 gana!" : "Player 1 wins!"
         } else if player1Score < player2Score {
            // result = "Player 2 wins!"
-            result = "Jugador 2 gana!"
+            result = game.spanishVersion ? "Jugador 2 gana!" : "Player 2 wins!"
         } else {
             result = "Empate!"
         }

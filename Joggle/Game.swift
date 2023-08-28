@@ -121,7 +121,7 @@ class Game: ObservableObject {
             .autoconnect()
             .sink(receiveValue: update)
         
-        timeRemaining = 20
+        timeRemaining = 60
     }
     //subtract a second from our timer until finally we run out of time and show the results
     func update(_ newTime: Date) {

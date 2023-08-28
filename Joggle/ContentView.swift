@@ -35,10 +35,6 @@ struct ContentView: View {
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                         .frame(maxWidth: 150)
                                 }
-//                                .onTapGesture {
-//                                    game.gameIsInSpanishVersion(spanishVersion: true)
-//                                    //game.spanishVersion.toggle()
-//                                }
                             }
                             .padding()
                             .background(.black.opacity(0.3))
@@ -63,11 +59,7 @@ struct ContentView: View {
                             .padding()
                             .background(.black.opacity(0.3))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
-//                            .onTapGesture {
-//                               // game.spanishVersion.toggle()
-//                                game.gameIsInSpanishVersion(spanishVersion: false)
-//                            }
-                            
+
                             Spacer()
                                 .frame(height: 1)
                         }
