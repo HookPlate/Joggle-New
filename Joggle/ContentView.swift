@@ -20,8 +20,6 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fill)
                         .edgesIgnoringSafeArea(.all)
                     HStack {
-//                        Spacer()
-//                            .frame(width: 180)
                         VStack(spacing: 60) {
                             VStack {
                                 Text("Jugar en Español")

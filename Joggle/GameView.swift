@@ -20,18 +20,22 @@ struct GameView: View {
             return Text("0:00")
         }
     }
+    //    init(isSpanish: Bool) {
+    //        self.isSpanish = false
+    //    }
     
-    var isSpanish: Bool {
-        didSet {
-            if isSpanish {
-                game.spanishVersion = true
-                player.spanishVersion = true
-            } else {
-                game.spanishVersion = false
-                player.spanishVersion = false
-            }
-        }
-    }
+    var isSpanish = false
+
+//        willSet {
+//            if isSpanish {
+//                game.spanishVersion = true
+//                player.spanishVersion = true
+//            } else {
+//                game.spanishVersion = false
+//                player.spanishVersion = false
+//            }
+//        }
+    
     
     var body: some View {
         //places some space between our boards.

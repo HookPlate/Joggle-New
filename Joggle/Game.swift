@@ -12,7 +12,7 @@ class Game: ObservableObject {
     //the string is the word that was found, the Player is who found it first.
     var scores = [String: Player]()
     
-     var spanishVersion = false
+    var spanishVersion = true
     
      var diceEitherOr: [[String]] {
         if spanishVersion {
@@ -102,12 +102,13 @@ class Game: ObservableObject {
     private var timer: AnyCancellable?
     
     init() {
+      //  self.spanishVersion = spanishVersion
         reset()
     }
     
     func reset() {
         //picks one random letter from each array in dice thus resetting the tiles var.
-        tiles = diceEitherOr.shuffled().map {
+        tiles = diceEitherOr.map {
             $0.randomElement() ?? "X"
         }
         scores.removeAll()

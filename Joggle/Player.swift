@@ -11,7 +11,7 @@ class Player: ObservableObject {
     var usedWords = [String]()
     var color = Color.black
     
-    var spanishVersion = false
+    var spanishVersion = true
     //positions of the letters on the board they've tapped so far. In this way we can check its adjacent neighbours and deselect them later on..
     @Published var selectedTiles = [Int]()
     
@@ -92,7 +92,7 @@ class Player: ObservableObject {
                 game.add(word, for: self)
                 selectedTiles.removeAll()
             } else {
-                return "Esta palabra no la conozco"
+                return "I don't know that word"
             }
         }
         
