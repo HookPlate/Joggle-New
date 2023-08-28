@@ -11,12 +11,14 @@ class Player: ObservableObject {
     var usedWords = [String]()
     var color = Color.black
     
-    var spanishVersion = true
+    
+    var spanishVersion : Bool
     //positions of the letters on the board they've tapped so far. In this way we can check its adjacent neighbours and deselect them later on..
     @Published var selectedTiles = [Int]()
     
-    init(color: Color) {
+    init(color: Color, spanishVersion : Bool) {
         self.color = color
+        self.spanishVersion = spanishVersion
     }
     //resets that players game
     func reset() {

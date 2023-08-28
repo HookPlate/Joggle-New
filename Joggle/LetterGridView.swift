@@ -64,8 +64,8 @@ struct LetterGridView: View {
     }
 }
 
-struct LetterGridView_Previews: PreviewProvider {
-    static var previews: some View {
-        LetterGridView(player: Player(color: .orange), game: Game())
-    }
-}
+//struct LetterGridView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LetterGridView(player: Player(color: .orange, spanishVersion: true), game: Game())
+//    }
+//}

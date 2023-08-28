@@ -11,8 +11,8 @@ class Game: ObservableObject {
     //keeps track of which player scored which words. Instead of stoppoing the players by telling them that the other player has found that word already (that would slow the game down a lot) we let them keep spelling but track who got them first.
     //the string is the word that was found, the Player is who found it first.
     var scores = [String: Player]()
-    
-    var spanishVersion = true
+    //currently, changing the below manually and the two bool in the Playr inits further down will change the game as we need, provingmy logic is sound for the dictionaries and keyboards.
+    var spanishVersion = false
     
      var diceEitherOr: [[String]] {
         if spanishVersion {
@@ -93,8 +93,8 @@ class Game: ObservableObject {
         ["S", "C", "A", "A", "P", "T"]
     ]
     
-    var player1 = Player(color: .mint)
-    var player2 = Player(color: .orange)
+    var player1 = Player(color: .mint, spanishVersion: false)
+    var player2 = Player(color: .orange, spanishVersion: false)
     var tiles = [String]()
     
     @Published var timeRemaining = 0.0
