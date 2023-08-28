@@ -27,7 +27,7 @@ struct ContentView: View {
                                     .foregroundStyle(.white)
                                     .font(.system(size: 17))
                                     .fontWeight(.bold)
-                                NavigationLink(destination: GameView()) {
+                                NavigationLink(destination: GameView().onAppear{game.spanishVersion = true}) {
                                     Image("spain")
                                         .renderingMode(.original)
                                         .resizable()
@@ -35,14 +35,15 @@ struct ContentView: View {
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                         .frame(maxWidth: 150)
                                 }
+//                                .onTapGesture {
+//                                    game.gameIsInSpanishVersion(spanishVersion: true)
+//                                    //game.spanishVersion.toggle()
+//                                }
                             }
                             .padding()
                             .background(.black.opacity(0.3))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .onTapGesture {
-                                game.gameIsInSpanishVersion(spanishVersion: true)
-                                //game.spanishVersion.toggle()
-                            }
+                            
                             
                             VStack {
                                 Text("Play in English")
@@ -50,7 +51,7 @@ struct ContentView: View {
                                     .foregroundStyle(.white)
                                     .font(.system(size: 17))
                                     .fontWeight(.bold)
-                                NavigationLink(destination: GameView()) {
+                                NavigationLink(destination: GameView().onAppear{game.spanishVersion = false}) {
                                     Image("uk")
                                         .renderingMode(.original)
                                         .resizable()
@@ -62,10 +63,10 @@ struct ContentView: View {
                             .padding()
                             .background(.black.opacity(0.3))
                             .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .onTapGesture {
-                               // game.spanishVersion.toggle()
-                                game.gameIsInSpanishVersion(spanishVersion: false)
-                            }
+//                            .onTapGesture {
+//                               // game.spanishVersion.toggle()
+//                                game.gameIsInSpanishVersion(spanishVersion: false)
+//                            }
                             
                             Spacer()
                                 .frame(height: 1)
