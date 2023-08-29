@@ -17,6 +17,7 @@ class Player: ObservableObject {
     //var spanishVersion : Bool
     //positions of the letters on the board they've tapped so far. In this way we can check its adjacent neighbours and deselect them later on..
     @Published var selectedTiles = [Int]()
+    @Published var currentWord = [String]()
     
     init(color: Color) {
         self.color = color
@@ -64,6 +65,10 @@ class Player: ObservableObject {
         
         if max(positionDifference.row, positionDifference.col) == 1 {
             selectedTiles.append(newIndex)
+            // using the index pull out the correct letter from the tiles String array in game
+//            let letter = game.tiles[newIndex]
+//            print(letter)
+//            currentWord.append(letter)
         }
     }
     

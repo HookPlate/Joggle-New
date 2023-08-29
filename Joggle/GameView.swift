@@ -11,7 +11,7 @@ struct GameView: View {
     
     //@StateObject private var game = Game()
     @EnvironmentObject var game: Game
-   // @StateObject private var player = Player(color: .green, spanishVersion: true)
+    @StateObject private var player = Player(color: .green)
     // place the timer view into a computed property then display it once normally and once with rotation
     var timeRemainingText: Text {
         if game.timeRemaining > 0 {
@@ -38,6 +38,8 @@ struct GameView: View {
                 
                 HStack {
                     Spacer()
+                    
+                   // Text(player.currentWord.joined(separator: ", "))
                     
                     timeRemainingText
                         .rotationEffect(.degrees(180))
@@ -74,6 +76,7 @@ struct GameView: View {
                 ResultsView(game: game)
             }
         }
+        .onDisappear(perform: game.reset)
     }
 }
 

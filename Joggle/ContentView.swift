@@ -55,6 +55,7 @@ struct ContentView: View {
                                         .clipShape(RoundedRectangle(cornerRadius: 10))
                                         .frame(maxWidth: 150)
                                 }
+                            
                             }
                             .padding()
                             .background(.black.opacity(0.3))
@@ -65,9 +66,12 @@ struct ContentView: View {
                         }
                     }
                 }
+                
             }
+            
     }
 }
+    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
