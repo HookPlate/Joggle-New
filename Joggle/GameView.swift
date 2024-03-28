@@ -27,14 +27,15 @@ struct GameView: View {
         //places some space between our boards.
         GeometryReader { geo in
             ZStack {
-                VStack(spacing: 50) {
+                VStack(spacing: 0) {
                     LetterGridView(player: game.player2, game: game)
                         .rotationEffect(.degrees(180))
+                        .padding(.bottom)
                     LetterGridView(player: game.player1, game: game)
+                        .padding(.top)
                 }
-                        .frame(width: geo.size.width / 1.015 ,height: geo.size.height / 1.015)
-  
-                .padding(10)
+                .frame(width: geo.size.width / 1.015 ,height: geo.size.height / 1.015)
+              //  .padding()
                 
                 HStack {
                     Spacer()
